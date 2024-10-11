@@ -15,6 +15,8 @@ export default function HomePage() {
               <Link href="#challenges" className="text-gray-600 hover:text-green-500">Challenges</Link>
               <Link href="#learn" className="text-gray-600 hover:text-green-500">Learn</Link>
               <Link href="/community" className="text-gray-600 hover:text-green-500">Community</Link>
+              <Link href="https://www.reddit.com/r/sg_community_gardens" className="text-gray-600 hover:text-green-500">Reddit Community</Link>
+              <Link href="https://www.reddit.com/r/plantclinic" className="text-gray-600 hover:text-green-500">Need help for plants?</Link>
             </div>
             <Button className="bg-green-600 hover:bg-green-700">Get Started</Button>
           </div>

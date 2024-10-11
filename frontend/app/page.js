@@ -70,7 +70,7 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   <ShieldCheck className="h-12 w-12 text-green-500 mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Mental Health</h3>
-                  <p className="text-gray-600">Gardening is linked to a 36% lower risk of dementia (Journal of Alzheimer's Disease)</p>
+                  <p className="text-gray-600">Gardening is linked to a <span className="font-bold text-green-500">36%</span> lower risk of dementia (Journal of Alzheimer's Disease)</p>
                 </CardContent>
               </Card>
             </div>
@@ -88,7 +88,7 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </span>
-                  <p className="text-gray-700">Singapore imports over 90% of its food, making it vulnerable to global supply disruptions [Singapore Food Agency]</p>
+                  <p className="text-gray-700">Singapore imports over <span className="font-bold text-red-500">90%</span> of its food, making it vulnerable to global supply disruptions [Singapore Food Agency]</p>
                 </li>
                 <li className="flex items-start">
                   <span className="bg-red-100 text-red-600 rounded-full p-1 mr-3 mt-1">
@@ -96,12 +96,12 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </span>
-                  <p className="text-gray-700">Only 1% of Singapore's land is used for agriculture [Agri-Food and Veterinary Authority of Singapore]</p>
+                  <p className="text-gray-700">Only <span className="font-bold text-red-500">1%</span> of Singapore's land is used for agriculture (Agri-Food and Veterinary Authority of Singapore)</p>
                 </li>
               </ul>
               <div className="mt-8 p-6 bg-green-100 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2 text-green-800">The "30 by 30" Goal</h3>
-                <p className="text-gray-700">Singapore aims to produce 30% of its nutritional needs locally by 2030 [Singapore Food Agency]</p>
+                <p className="text-gray-700">Singapore aims to produce 30% of its nutritional needs locally by 2030 (Singapore Food Agency)</p>
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 GrowSG. All rights reserved.</p>
+            <p>&copy; 2024 SG Community Gardens. All rights reserved.</p>
           </div>
         </div>
       </footer>

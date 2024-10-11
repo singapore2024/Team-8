@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MapPin } from "lucide-react";
 import Navbar from '@/components/ui/Navbar';
+import Link from 'next/link';
 
 const Community = () => {
     
@@ -73,10 +74,41 @@ const Community = () => {
             </section>
 
             <div className="text-center">
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
-                Find a Garden Near You
-            </Button>
+            <Link href="/form" passHref>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                    Find a Garden Near You
+                </Button>
+            </Link>
             </div>
+
+            <header className="text-center space-y-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-green-800">Singapore Alloment Garden map</h1>
+                <p className="text-lg text-green-700">Alloment gardens are small plots of gardens for your own individual gardening</p>
+            </header>
+            <div id="mapContainer" className='w-full h-[600px] border-2 border-[#ddd]'>
+                <iframe
+                    src='https://www.google.com/maps/d/embed?mid=1apkeSb5QHzODZOp7DdtNxFTa61GSA9U&femb=1&ll=1.3698787913810788%2C103.8250301&z=12'
+                    className='w-full h-full border-0'
+                    allowFullScreen
+                >
+
+                </iframe>
+            </div>
+            <div className='flex gap-3'>
+            <Link href="https://go.gov.sg/nparks-ag-plot-how-to-apply-axs" passHref>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                    How to apply
+                </Button>
+            </Link>
+
+            <Link href="https://go.gov.sg/nparks-ag-plot-how-to-pay-axs" passHref>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                    How to pay
+                </Button>
+            </Link>
+            </div>    
+
+
 
             <footer className="text-center text-sm text-gray-500 mt-8">
                 <p>Data provided by National Parks Board (NParks) and various community initiatives.</p>

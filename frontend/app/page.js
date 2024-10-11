@@ -13,7 +13,7 @@ export default function HomePage() {
             <div className="hidden md:flex space-x-4">
               <Link href="#benefits" className="text-gray-600 hover:text-green-500">Benefits</Link>
               <Link href="#challenges" className="text-gray-600 hover:text-green-500">Challenges</Link>
-              <Link href="#learn" className="text-gray-600 hover:text-green-500">Learn</Link>
+              <Link href="/infopage" className="text-gray-600 hover:text-green-500">Learn</Link>
               <Link href="/community" className="text-gray-600 hover:text-green-500">Community</Link>
               <Link href="https://www.reddit.com/r/sg_community_gardens" className="text-gray-600 hover:text-green-500">Reddit</Link>
               <Link href="https://www.reddit.com/r/plantclinic" className="text-gray-600 hover:text-green-500">Plant help?</Link>

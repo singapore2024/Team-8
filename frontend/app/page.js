@@ -9,7 +9,7 @@ export default function HomePage() {
       <header className="bg-green-50">
         <nav className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold text-green-600">GrowSG</div>
+            <div className="text-xl font-semibold text-green-600">SG Community Garden</div>
             <div className="hidden md:flex space-x-4">
               <Link href="#benefits" className="text-gray-600 hover:text-green-500">Benefits</Link>
               <Link href="#challenges" className="text-gray-600 hover:text-green-500">Challenges</Link>
@@ -53,7 +53,7 @@ export default function HomePage() {
                   <Leaf className="h-12 w-12 text-green-500 mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Cost Savings</h3>
                   <p className="text-gray-600">
-                    Reduces grocery bills by up to <span className="font-bold text-green-500">30%</span> for a family of four [National Gardening Association]
+                    Reduces grocery bills by up to <span className="font-bold text-green-500">30%</span> for a family of four (National Gardening Association)
                   </p>
                 </CardContent>
               </Card>
@@ -70,7 +70,7 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   <ShieldCheck className="h-12 w-12 text-green-500 mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Mental Health</h3>
-                  <p className="text-gray-600">Gardening is linked to a 36% lower risk of dementia [Journal of Alzheimer's Disease]</p>
+                  <p className="text-gray-600">Gardening is linked to a 36% lower risk of dementia (Journal of Alzheimer's Disease)</p>
                 </CardContent>
               </Card>
             </div>
@@ -115,7 +115,7 @@ export default function HomePage() {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src="https://www.youtube.com/watch?v=W9tGyNyfDbs" 
+                  src="https://www.youtube.com/embed/W9tGyNyfDbs" 
                   title="Urban Farming in Singapore" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -126,7 +126,7 @@ export default function HomePage() {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src="https://www.youtube.com/watch?v=6k4DBspmqsQ" 
+                  src="https://www.youtube.com/embed/6k4DBspmqsQ" 
                   title="Rooftop Farming in Singapore" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -152,7 +152,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">GrowSG</h3>
+              <h3 className="text-lg font-semibold mb-4">SG Community Garden</h3>
               <p className="text-gray-400">Empowering Singaporeans to grow their own food and contribute to national food security.</p>
             </div>
             <div>

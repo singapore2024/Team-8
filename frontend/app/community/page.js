@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MapPin } from "lucide-react";
 import Navbar from '@/components/ui/Navbar';
+import Link from 'next/link';
 
 const Community = () => {
     
@@ -72,9 +73,11 @@ const Community = () => {
             </section>
 
             <div className="text-center">
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
-                Find a Garden Near You
-            </Button>
+            <Link href="/form" passHref>
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                    Find a Garden Near You
+                </Button>
+            </Link>
             </div>
 
             <footer className="text-center text-sm text-gray-500 mt-8">

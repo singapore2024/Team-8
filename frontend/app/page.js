@@ -192,10 +192,12 @@ export default function HomePage() {
         <section className="py-20 bg-green-50">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Ready to Start Growing?</h2>
-            <Button className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
-              Join the Movement
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/community">
+              <Button className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
+                Join the Movement
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>

@@ -24,7 +24,10 @@ const Navbar = () => {
               Plant help?
             </Link>
           </div>
-          <Button className="bg-green-600 hover:bg-green-700">Get Started</Button>
+          <Link href="/infopage">
+            <Button className="bg-green-600 hover:bg-green-700">Get Started</Button>
+          </Link>
+          
         </div>
       </nav>
     </header>

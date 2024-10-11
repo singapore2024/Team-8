@@ -22,6 +22,15 @@ const Community = () => {
 
                 </iframe>
             </div>
+                <section className="space-y-4">
+                <h2 className="text-2xl font-semibold text-green-800">About Community Gardening in Singapore</h2>
+                <p className="text-gray-700">
+                    Singapore, known as the "Garden City," has a thriving community gardening scene. These gardens provide
+                    opportunities for residents to grow their own produce, connect with nature, and build stronger
+                    communities. From rooftop gardens to neighborhood allotments, there's a diverse range of spaces
+                    where you can exercise your green thumb.
+                </p>
+                </section>
             <section className="grid md:grid-cols-2 gap-4">
           <Card>
             <CardHeader>

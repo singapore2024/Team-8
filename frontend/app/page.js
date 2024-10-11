@@ -2,27 +2,12 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Leaf, ShieldCheck, Sprout } from "lucide-react"
+import Navbar from "@/components/ui/Navbar"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-green-50">
-        <nav className="container mx-auto px-6 py-3">
-          <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold text-green-600">SG Community Garden</div>
-            <div className="hidden md:flex space-x-4">
-              <Link href="#benefits" className="text-gray-600 hover:text-green-500">Benefits</Link>
-              <Link href="#challenges" className="text-gray-600 hover:text-green-500">Challenges</Link>
-              <Link href="/infopage" className="text-gray-600 hover:text-green-500">Learn</Link>
-              <Link href="/community" className="text-gray-600 hover:text-green-500">Community</Link>
-              <Link href="https://www.reddit.com/r/sg_community_gardens" className="text-gray-600 hover:text-green-500">Reddit</Link>
-              <Link href="https://www.reddit.com/r/plantclinic" className="text-gray-600 hover:text-green-500">Plant help?</Link>
-            </div>
-            <Button className="bg-green-600 hover:bg-green-700">Get Started</Button>
-          </div>
-        </nav>
-      </header>
-
+      <Navbar />
       <main>
         <section className="bg-green-50 py-20">
           <div className="container mx-auto px-6">

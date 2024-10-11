@@ -1,13 +1,19 @@
 "use client"; // Mark this file as a client component
 
+<<<<<<< Updated upstream
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { MapPin } from "lucide-react";
+=======
+import React, { useEffect } from 'react';
+import Navbar from "@/components/ui/Navbar";
+>>>>>>> Stashed changes
 
 const Community = () => {
     
     return (
+<<<<<<< Updated upstream
         <div className='bg-green-50 p-4 md:p-8 space-y-8'>
             <header className="text-center space-y-4">
                 <h1 className="text-3xl md:text-4xl font-bold text-green-800">Singapore Community Gardens Map</h1>
@@ -78,6 +84,11 @@ const Community = () => {
           <p>Data provided by National Parks Board (NParks) and various community initiatives.</p>
           <p>Last updated: {new Date().toLocaleDateString()}</p>
         </footer>
+=======
+        <div className='bg-green-50 p-4 md:p-8'>
+            <Navbar/>
+            {/* The map container will be appended here */}
+>>>>>>> Stashed changes
         </div>
     );
 };

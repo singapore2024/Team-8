@@ -10,9 +10,10 @@ import Link from 'next/link';
 const Community = () => {
     
     return (
-
+        <>
+        <Navbar />
         <div className='bg-green-50 p-4 md:p-8 space-y-8'>
-            <Navbar/>
+            
             <header className="text-center space-y-4">
                 <h1 className="text-3xl md:text-4xl font-bold text-green-800">Singapore Community Gardens Map</h1>
                 <p className="text-lg text-green-700">Discover green spaces where you can nurture your gardening passion</p>
@@ -85,7 +86,8 @@ const Community = () => {
                 <p>Last updated: {new Date().toLocaleDateString()}</p>
             </footer>
           
-        </div>
+            </div>
+        </>
     );
 };
 

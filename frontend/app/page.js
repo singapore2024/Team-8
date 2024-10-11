@@ -9,7 +9,7 @@ export default function HomePage() {
       <header className="bg-green-50">
         <nav className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold text-green-600">GrowSG</div>
+            <div className="text-xl font-semibold text-green-600">SG Community Garden</div>
             <div className="hidden md:flex space-x-4">
               <Link href="#benefits" className="text-gray-600 hover:text-green-500">Benefits</Link>
               <Link href="#challenges" className="text-gray-600 hover:text-green-500">Challenges</Link>
@@ -152,7 +152,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">GrowSG</h3>
+              <h3 className="text-lg font-semibold mb-4">SG Community Garden</h3>
               <p className="text-gray-400">Empowering Singaporeans to grow their own food and contribute to national food security.</p>
             </div>
             <div>

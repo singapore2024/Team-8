@@ -7,6 +7,7 @@ const Community = () => {
     const createMapContainer = () => {
         // Create a div for the map container
         const mapDiv = document.createElement('div');
+
         mapDiv.id = 'mapContainer'; // ID for CSS targeting or future reference
         mapDiv.style.width = '100%'; // Full width
         mapDiv.style.height = '600px'; // Set height for the container
@@ -18,7 +19,6 @@ const Community = () => {
         iframe.src = 'https://www.google.com/maps/d/u/0/embed?mid=1IyjD6zhWArZZhDMZnE-J-lJHtYr8LEg&ll=1.3549293641578666%2C103.8118335&z=11'; // Your specific map link
         iframe.width = '100%'; // Full width
         iframe.height = '100%'; // Full height to fill container
-        iframe.frameBorder = '0'; // No border
         iframe.style.border = '0'; // No border for the iframe
         iframe.allowFullscreen = true; // Allow fullscreen mode
 
@@ -30,12 +30,17 @@ const Community = () => {
 
     // Use useEffect to run the function on component mount
     useEffect(() => {
+        // prevent loading twice
+        if (!document.getElementById('mapContainer'))
         createMapContainer(); // Create the map container and embed the Google My Map
     }, []);
 
     return (
-        <div>
-            <h1>Community Map</h1>
+        <div className='bg-green-50 p-4 md:p-8'>
+            <header className="text-center space-y-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-green-800">Singapore Community Gardens Map</h1>
+                <p className="text-lg text-green-700">Discover green spaces where you can nurture your gardening passion</p>
+            </header>
             {/* The map container will be appended here */}
         </div>
     );

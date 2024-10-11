@@ -1,13 +1,43 @@
+ "use client"
+
+import react, { useState } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Leaf, ShieldCheck, Sprout } from "lucide-react"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
 import Navbar from "@/components/ui/Navbar"
 
 export default function HomePage() {
+
+  const [step, setStep] = useState(0)
+  const [showResult, setShowResult] = useState(false)
+
+  const questions = [
+    { question: "How often can you water your plant?", options: ["Frequently", "Occasionally", "Rarely"] },
+    { question: "What kind of sunlight does your space receive?", options: ["Direct sunlight", "Partial shade", "Low light"] },
+    { question: "How much time can you commit to plant care?", options: ["A lot", "Moderate", "Minimal"] },
+    { question: "How quickly do you want your plant to grow?", options: ["Fast", "Medium", "Slow"] },
+  ]
+
+  const handleNext = () => {
+    if (step < questions.length - 1) {
+      setStep(step + 1)
+    } else {
+      setShowResult(true)
+    }
+  }
+
+  const resetQuiz = () => {
+    setStep(0)
+    setShowResult(false)
+  }
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+
       <main>
         <section className="bg-green-50 py-20">
           <div className="container mx-auto px-6">
@@ -19,10 +49,45 @@ export default function HomePage() {
                 Join the urban farming revolution and contribute to Singapore's food security
               </p>
               <div className="flex justify-center space-x-4">
-                <Button className="bg-green-600 hover:bg-green-700">
-                  Start Growing
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button className="bg-green-600 hover:bg-green-700">
+                      Find Your Plant Match!
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80">
+                    {!showResult ? (
+                      <div className="space-y-4">
+                        <h3 className="font-medium text-lg">{questions[step].question}</h3>
+                        <RadioGroup>
+                          {questions[step].options.map((option, index) => (
+                            <div key={index} className="flex items-center space-x-2">
+                              <RadioGroupItem value={option} id={`option-${index}`} />
+                              <Label htmlFor={`option-${index}`}>{option}</Label>
+                            </div>
+                          ))}
+                        </RadioGroup>
+                        <Button onClick={handleNext} className="w-full">
+                          {step === questions.length - 1 ? "See Result" : "Next"}
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="space-y-4">
+                        <h3 className="font-medium text-lg">Your Plant Match: Chilli Padi!</h3>
+                        <p>Based on your preferences, we recommend the Chilli Padi plant!</p>
+                        <ul className="list-disc pl-5 space-y-1">
+                          <li>Requires frequent watering</li>
+                          <li>Thrives in direct sunlight</li>
+                          <li>Needs moderate care</li>
+                          <li>Grows relatively fast</li>
+                        </ul>
+                        <p className="italic">Get ready for some spicy harvests!</p>
+                        <Button onClick={resetQuiz} className="w-full">Start Over</Button>
+                      </div>
+                    )}
+                  </PopoverContent>
+                </Popover>
                 <Button variant="outline" className="text-green-600 border-green-600 hover:bg-green-50">
                   Learn More
                 </Button>

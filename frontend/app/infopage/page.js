@@ -2,58 +2,63 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Sun, Droplet, Scissors } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Navbar from "@/components/ui/Navbar"
 
+// Update plants array to include URLs
 const plants = [
   { 
     id: 1, 
-    name: "Snake Plant", 
-    image: "https://i.imgur.com/w2QFXgW.jpeg", 
+    name: "Chinese Flowering Cabbage (Cai Xin)", 
+    image: "https://www.nparks.gov.sg/-/media/ffw/protected/flora/5/9/5950/brassica-rapa-(caixin)_vicky-lim-(2).jpg", 
     sunlight: 2, 
     maintenance: 1, 
     water: 1,
-    description: "Low-maintenance indoor plant that can tolerate low light and infrequent watering."
+    description: "Low-maintenance indoor plant that can tolerate low light and infrequent watering.",
+    url: "https://www.nparks.gov.sg/-/media/gwe-2021/2021-gwe-cai-xin.pdf" // Add your specific URL here
   },
   { 
     id: 2, 
-    name: "Monstera Deliciosa", 
-    image: "https://i.imgur.com/H7NliA4b.jpg", 
+    name: "Kang Kong", 
+    image: "https://sunnybankfruit.com.au/wp-content/uploads/2021/09/IMG_2877-kang-kong.jpg", 
     sunlight: 3, 
     maintenance: 2, 
     water: 2,
-    description: "Popular houseplant known for its large, glossy, perforated leaves."
+    description: "Popular houseplant known for its large, glossy, perforated leaves.",
+    url: "https://www.nparks.gov.sg/-/media/gwe-2021/2021-gwe-kangkong.pdf" // Add your specific URL here
   },
   { 
     id: 3, 
-    name: "Lavender", 
-    image: "https://i.imgur.com/5pEiHMfb.jpg", 
+    name: "Nai Bai Cai", 
+    image: "https://www.nparks.gov.sg/-/media/ffw/protected/flora/6/5/6526/brassica-rapa-pak-choi-group-nai-bai-cai-jennie-tang_4.jpg", 
     sunlight: 5, 
     maintenance: 3, 
     water: 2,
-    description: "Fragrant herb that requires full sun and well-draining soil."
+    description: "Fragrant herb that requires full sun and well-draining soil.",
+    url: "https://www.nparks.gov.sg/-/media/gwe-2021/2021-gwe-nai-bai-cai.pdf" // Add your specific URL here
   },
   { 
     id: 4, 
-    name: "Aloe Vera", 
-    image: "https://i.imgur.com/fNMNqmRb.jpg", 
+    name: "Bayam Plant", 
+    image: "https://www.thelivingcentre.sg/store/wp-content/uploads/2021/05/RedBayam.jpg", 
     sunlight: 4, 
     maintenance: 1, 
     water: 1,
-    description: "Succulent plant with medicinal properties, requires bright light and minimal watering."
+    description: "Succulent plant with medicinal properties, requires bright light and minimal watering.",
+    url: "https://www.nparks.gov.sg/-/media/gwe-2021/2021-gwe-bayam-green-,-a-,-red.pdf" // Add your specific URL here
   },
   { 
     id: 5, 
-    name: "Boston Fern", 
-    image: "https://i.imgur.com/0SbiR2tb.jpg", 
+    name: "Huang Jing Bai Cai (Pak Choy)", 
+    image: "https://www.nparks.gov.sg/-/media/ffw/protected/flora/8/5/8540/brassica_rapa_huang_jing_bai_cai_vicky_lim_yen_ngoh_5.jpg", 
     sunlight: 3, 
     maintenance: 4, 
     water: 4,
-    description: "Lush, feathery fern that thrives in humid environments with indirect light."
+    description: "Lush, feathery fern that thrives in humid environments with indirect light.",
+    url: "https://www.nparks.gov.sg/-/media/gwe-2021/2021-gwe-huang-jing-bai-cai.pdf" // Add your specific URL here
   },
 ]
 
@@ -124,10 +129,16 @@ export default function PlantInfoPage() {
           {filteredPlants.map(plant => (
             <Card key={plant.id}>
               <CardHeader>
-                <CardTitle>{plant.name}</CardTitle>
+                <CardTitle>
+                  <Link href={plant.url} target="_blank" className="text-blue-500 hover:underline">
+                    {plant.name}
+                  </Link>
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <img src={plant.image} alt={plant.name} className="w-full h-48 object-cover mb-4 rounded-md" />
+                <Link href={plant.url} target="_blank">
+                  <img src={plant.image} alt={plant.name} className="w-full h-48 object-cover mb-4 rounded-md" />
+                </Link>
                 <p className="text-sm text-gray-600 mb-4">{plant.description}</p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary" className="flex items-center">

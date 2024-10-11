@@ -74,15 +74,15 @@ export default function HomePage() {
                       </div>
                     ) : (
                       <div className="space-y-4">
-                        <h3 className="font-medium text-lg">Your Plant Match: Chilli Padi!</h3>
-                        <p>Based on your preferences, we recommend the Chilli Padi plant!</p>
+                        <h3 className="font-medium text-lg">Your Plant Match: Kang Kong!</h3>
+                        <p>Based on your preferences, we recommend the Kang Kong plant!</p>
                         <ul className="list-disc pl-5 space-y-1">
                           <li>Requires frequent watering</li>
                           <li>Thrives in direct sunlight</li>
                           <li>Needs moderate care</li>
                           <li>Grows relatively fast</li>
                         </ul>
-                        <p className="italic">Get ready for some spicy harvests!</p>
+                        <p className="italic">Get ready for some fresh harvests!</p>
                         <Button onClick={resetQuiz} className="w-full">Start Over</Button>
                       </div>
                     )}
